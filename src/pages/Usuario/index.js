@@ -27,7 +27,7 @@ export default class Index extends React.Component {
         senha: "",
       },
     };
-    this.togglePassword = this.togglePassword.bind(this);
+    this.showPassword = this.showPassword.bind(this);
   }
 
   handleChange = (e) => {
@@ -176,8 +176,10 @@ export default class Index extends React.Component {
     this.getUsuario();
   }
 
-  async togglePassword() {
-    this.setState((prevState) => ({ showPassword: !prevState.showPassword }));
+  showPassword() {
+    this.setState((previousState) => ({
+      showPassword: !previousState.showPassword,
+    }));
   }
 
   render() {
@@ -227,13 +229,13 @@ export default class Index extends React.Component {
                     value={record.senha}
                     name="senha"
                   />
-                  <Button
+                  {/* <Button
                     color="info"
                     className="show-password"
-                    onClick={() => this.togglePassword()}
+                    onClick={() => this.showPassword()}
                   >
                     {showPassword ? <MdVisibility /> : <MdVisibilityOff />}
-                  </Button>
+                  </Button> */}
                 </Form.Group>
                 <Button
                   variant="primary"
@@ -280,13 +282,13 @@ export default class Index extends React.Component {
                     value={record.senha}
                     name="senha"
                   />
-                  <Button
+                  {/* <Button
                     color="info"
                     className="show-password"
-                    onClick={() => this.togglePassword()}
+                    onClick={() => this.showPassword()}
                   >
                     {showPassword ? <MdVisibility /> : <MdVisibilityOff />}
-                  </Button>
+                  </Button> */}
                 </Form.Group>
                 <div className={"Buttons"}>
                   <Button

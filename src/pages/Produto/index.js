@@ -15,7 +15,7 @@ export default class Index extends React.Component {
     this.state = {
       produtos: [],
       fornecedores: [],
-      idfornecedor: 0,
+      idfornecedor: 1,
       page: 1,
       lenght: 2,
       totalRegistros: 0,
@@ -339,6 +339,7 @@ export default class Index extends React.Component {
                   <th>Nome</th>
                   <th>Valor</th>
                   <th>Fornecedor</th>
+                  <th>Quantidade</th>
                   <th>Excluir</th>
                   <th>Editar</th>
                 </tr>
@@ -347,10 +348,11 @@ export default class Index extends React.Component {
                 return (
                   <tbody key={item.id}>
                     <tr>
-                      <td>{item.id}</td>
-                      <td>{item.nome}</td>
-                      <td>{item.valor}</td>
-                      <td>{item.fornecedor.nome}</td>
+                      <td className={"TdCenter"}>{item.id}</td>
+                      <td className={"TdCenter"}>{item.nome}</td>
+                      <td className={"TdCenter"}>{item.valor}</td>
+                      <td className={"TdCenter"}>{item.fornecedor.nome}</td>
+                      <td className={"TdCenter"}>{item.quantidade}</td>
                       <td>
                         <Button onClick={() => this.delProduto(item.id)}>
                           <FiTrash2 />
