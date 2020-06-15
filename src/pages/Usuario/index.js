@@ -176,10 +176,8 @@ export default class Index extends React.Component {
     this.getUsuario();
   }
 
-  showPassword() {
-    this.setState((previousState) => ({
-      showPassword: !previousState.showPassword,
-    }));
+  togglePassword() {
+    this.setState((prevState) => ({ showPassword: !prevState.showPassword }));
   }
 
   render() {
@@ -222,20 +220,26 @@ export default class Index extends React.Component {
                 </Form.Group>
                 <Form.Group controlId="formBasicPassword">
                   <Form.Label>Senha</Form.Label>
-                  <Form.Control
-                    type="password"
-                    placeholder="Senha"
-                    onChange={this.handleChange}
-                    value={record.senha}
-                    name="senha"
-                  />
-                  {/* <Button
-                    color="info"
-                    className="show-password"
-                    onClick={() => this.showPassword()}
-                  >
-                    {showPassword ? <MdVisibility /> : <MdVisibilityOff />}
-                  </Button> */}
+                  <div className="showPassword">
+                    <Form.Control
+                      type={showPassword ? "text" : "password"}
+                      placeholder="Senha"
+                      onChange={this.handleChange}
+                      value={record.senha}
+                      name="senha"
+                    />
+                    <Button
+                      color="info"
+                      className="show-password"
+                      onClick={() => this.togglePassword()}
+                    >
+                      {showPassword ? (
+                        <MdVisibility className={"icon"} />
+                      ) : (
+                        <MdVisibilityOff className={"icon"} />
+                      )}
+                    </Button>
+                  </div>
                 </Form.Group>
                 <Button
                   variant="primary"
@@ -265,6 +269,7 @@ export default class Index extends React.Component {
                 </Form.Group>
                 <Form.Group>
                   <Form.Label>E-mail</Form.Label>
+
                   <Form.Control
                     type="email"
                     placeholder="Insira um e-mail"
@@ -275,20 +280,26 @@ export default class Index extends React.Component {
                 </Form.Group>
                 <Form.Group controlId="formBasicPassword">
                   <Form.Label>Senha</Form.Label>
-                  <Form.Control
-                    type="password"
-                    placeholder="Senha"
-                    onChange={this.handleChange}
-                    value={record.senha}
-                    name="senha"
-                  />
-                  {/* <Button
-                    color="info"
-                    className="show-password"
-                    onClick={() => this.showPassword()}
-                  >
-                    {showPassword ? <MdVisibility /> : <MdVisibilityOff />}
-                  </Button> */}
+                  <div className="showPassword">
+                    <Form.Control
+                      type={showPassword ? "text" : "password"}
+                      placeholder="Senha"
+                      onChange={this.handleChange}
+                      value={record.senha}
+                      name="senha"
+                    />
+                    <Button
+                      color="info"
+                      className="show-password"
+                      onClick={() => this.togglePassword()}
+                    >
+                      {showPassword ? (
+                        <MdVisibility className={"icon"} />
+                      ) : (
+                        <MdVisibilityOff className={"icon"} />
+                      )}
+                    </Button>
+                  </div>
                 </Form.Group>
                 <div className={"Buttons"}>
                   <Button
