@@ -1,0 +1,15 @@
+{
+  "name": "react-router",
+  "homepage": "https://github.com/rackt/react-router",
+  "version": "5.2.0",
+  "_release": "5.2.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v5.2.0",
+    "commit": "ce90f5f71a97c04d5d1ced34900254b93a63db97"
+  },
+  "_source": "https://github.com/rackt/react-router.git",
+  "_target": "^5.2.0",
+  "_originalSource": "react-router",
+  "_direct": true
+}

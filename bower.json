@@ -1,0 +1,14 @@
+{
+  "name": "cadastro-produto",
+  "description": "Projeto para cadastro de produtos",
+  "main": "index.js",
+  "authors": ["João Guilherme Tostes"],
+  "license": "MIT",
+  "keywords": ["cadastro", "produto"],
+  "homepage": "https://github.com/blackjota/Cadastro-de-Produtos",
+  "private": true,
+  "ignore": ["**/.*", "node_modules", "bower_components", "test", "tests"],
+  "dependencies": {
+    "react-router-dom": "^5.0.1"
+  }
+}
