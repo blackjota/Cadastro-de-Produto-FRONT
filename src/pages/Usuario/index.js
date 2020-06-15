@@ -27,7 +27,6 @@ export default class Index extends React.Component {
         senha: "",
       },
     };
-    this.showPassword = this.showPassword.bind(this);
   }
 
   handleChange = (e) => {
